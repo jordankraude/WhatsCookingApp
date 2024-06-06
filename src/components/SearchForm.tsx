@@ -15,7 +15,8 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onSearch(query);
-    setQuery(''); // Clear the input field after submitting
+    setQuery(''); 
+    // Clear the input field after submitting
   };
 
   return (
@@ -23,6 +24,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
       <input
         type="text"
         value={query}
+        // constatly updating input
         onChange={handleChange}
         placeholder="Search for recipes..."
         className="p-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"

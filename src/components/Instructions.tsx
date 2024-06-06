@@ -1,27 +1,28 @@
 import React, { useEffect } from 'react';
 
 const Instructions: React.FC = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log('Scrolling...');
-      const elements = document.querySelectorAll('.fade-in');
-      console.log(elements)
-      elements.forEach((element: Element) => {
-        const rect = element.getBoundingClientRect();
-        console.log(rect)
-        const windowHeight = window.innerHeight;
-        const offset = windowHeight - rect.top;
-        const opacity = offset / windowHeight;
-        (element as HTMLElement).style.opacity = `${opacity}`;
-      });
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     console.log('Scrolling...');
+  //     const elements = document.querySelectorAll('.fade-in');
+  //     console.log(elements)
+  //     elements.forEach((element: Element) => {
+  //       const rect = element.getBoundingClientRect();
+  //       console.log(rect)
+  //       const windowHeight = window.innerHeight;
+  //       const offset = windowHeight - rect.top;
+  //       const opacity = offset / windowHeight;
+  //       (element as HTMLElement).style.opacity = `${opacity}`;
+  //     });
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    console.log('Scroll event listener added.');
+  //   window.addEventListener('scroll', handleScroll);
+  //   console.log('Scroll event listener added.');
 
 
-  }, []);
+  // }, []);
 
+  // basic instructions for app use for users
   return (
     <div className="fixed inset-0 overflow-y-auto bg-gray-100 p-4 z-0 h-screen text-xl pt-32">
       <p className="text-2xl text-gray-700 mb-20 mx-20 fade-out">
