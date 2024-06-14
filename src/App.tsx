@@ -5,6 +5,7 @@ import RecipeList from './components/RecipeList';
 import Loading from './components/Loading';
 import Instructions from './components/Instructions';
 import Favorites from './components/Favorites';
+import Logo from './Images/WhatsCookingLogoWhite.png'
 import './styles.css';
 import axios from 'axios';
 
@@ -54,9 +55,9 @@ const App: React.FC = () => {
                 <Link to='/'>
                   What's Cooking!
                 </Link>
-                <Link to='/'>
-                  <img className="h-10 ml-2 mb-4" src={require('./Images/WhatsCookingLogoWhite.png').default} alt="What's Cooking Logo" />
-                </Link>
+
+                  <img className="h-10 ml-2 mb-4" src={Logo} alt="What's Cooking Logo" />
+
               </h1>
             </div>
             <div>
